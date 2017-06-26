@@ -1,0 +1,30 @@
+
+<!DOCTYPE HTML>
+<html>
+<body>
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class = "jumbotron text-center">
+    <image src = '/static/FRH1.png' alt="FraggleRockHit"  height="240" width="720">
+    <p class="lead">Machine Learning Applied to Drug Lead Identification
+  </div>
+  <br>
+<h1>Approach</h1>
+<p>FraggleRockHits is a machine learning application for drug lead identification. Machine learning algorithms are trained using target specific fragment screen results to predict hit propensity of traditional high-throughput molecular libraries. The application of a FraggleRock model, unique to your target, can help you reduce the size of your potential screening library-- saving time and resources in your drug discovery process.
+  <br><br>
+  <h2>Step 1) Fraggle</h2>
+  <h4>Provide a fragment library, scored to your unique target</h4>
+  <p>FraggleRockHit provides a platform to apply advanced machine learning techniques to your unique data. Upload a CSV file of your scored fragment library and individual phisiochimcal attributes and/or chemical finger print identifiers.Then proceed to model training.
+  <br><br>
+  <h2>Step 2) Rock</h2>
+  <h4>Train a Random Forest Classifier</h4>
+  <p>Random forests are an ensemble machine learning method. Random forests are populated from an ensemble of decision trees built with bootstrapped samples. A single decision tree suffers from high variance, building many decision trees on slight variations of the training data can reduce the variance associated with data classification. Variable training sets are achieved through bootstrapping, a technique for random sampling with replacement of the data. Random forests further reduce variance by randomly selecting the features available for consideration at each split in the tree. The classification of a single data point is averaged over all of the decision trees in the forest, resulting in a robust classification. 
+<br>
+FraggleRockHits trains a random forest classifier to recognize the physiochemical properties critical for interaction with your unique protein target. This model can then be used to score larger molecules for probability of target interaction. The user can review the training statistics and select a threshold for hit identification that yields the most effective results for their scientific objective. 
+  <br><br>
+  <h2>Step 3) Hits</h2>
+  <h4>Review predicted hits</h4>
+  <p>Provide the high-throughput screen of your choice. This library will be applied to a uniquely trained and optimized model to yield a predictive hit propensity. FraggleRockHits will also provide a list of important features to consider during lead optimization.
+{% endblock %}
+</body></html>

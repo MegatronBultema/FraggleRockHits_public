@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <!doctype html>
+  <html>
+  <head>
+  <style>
+
+
+
+  </style>
+  </head>
+  <body>
+  <div class = "jumbotron text-center">
+  <h1>Fraggle</h1>
+  <p>Upload fragment screening results in csv format.
+    </div>
+    <h2>Step 1) Fraggle</h2>
+    <h4>Provide a fragment library, scorred to your unique target in csv format.</h4>
+    <p>Model trainning has been proven sucessful using descriptors  generated from <a href="http://www.rdkit.org/">RDKit</a>: combining chemical fingerprints (Morgan, 1024 bits, radius 4) and physicochemical properties into a single csv file. The first column in the uploaded file should contain the fragment scorring (1 indicates fragment hit, 0 indicates not a hit). The top row of the file should contain the column labels.
+    <br>Column name of your fragment scorring column:
+  <form method=post enctype=multipart/form-data>
+    <p><input type=text name=hit>
+    <br>Column name of molecule ids:
+    <p><input type=text name=id>
+    <br>First column name of your fragment properties:
+    <p><input type=text name=start>
+    <br>Last column name of your fragment properties:
+    <p><input type=text name=end>
+    <br><p><input type=file name=file>
+       <input type=submit value=Upload>
+  </form>
+
+
+{% endblock %}

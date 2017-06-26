@@ -1,0 +1,86 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+<html>
+<head>
+<style>
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.img2 {
+    float: center;
+}
+img.center {
+    display: block;
+    margin: 0 auto;
+}
+p {
+    font-size: 150%;
+}
+
+    table.dataframe, .dataframe th, .dataframe td {
+        border: 1px solid #dddddd;
+        border-spacing: 10px;
+        border-collapse: collapse;;
+        text-align:left;
+        padding: 8px;
+        margin-bottom: 20px;
+        table-layout: fixed;
+        width: 150px;
+      }
+      tr:nth-child(odd)		{ background-color:#eee; }
+      tr:nth-child(even)	{ background-color:#fff; }
+
+      .data th {
+      background-color: #c94285;
+      color: black;}
+
+      </style>
+      </head>
+      <body>
+
+
+  <div class = "jumbotron text-center">
+    <h1>Hits</h1>
+    <p class="lead">Machine Learning Applied to Fragment Based Virtual Screening <br>
+  </div>
+  <p>{{thresh | safe}}
+  <h3> Showing 50 molecules with highest probability of being a hit to your target.
+  <br> The entire scored libaray is available for download at the bottom.</h3>
+  <p>{{hits | safe}}
+    
+    <form method=post enctype=multipart/form-data, action = "/download">
+         <input type=submit value=Download>
+</form>
+
+<br><br><br>
+  <h3> Was this high-thoughput library previously scorred? If so you can compare FraggleRockHits results to those!</h3>
+
+  <form method=post enctype=multipart/form-data value = 'Validate'>
+    <br><p>Column name of molecule ids:
+    <p><input type=text name=id>
+    <br>Column name of your fragment scorring column:
+    <p><input type=text name=hit>
+    <br><p>Upload the csv file with scorred 1 for hit and 0 for not a hit.
+    <br><p><input type=file name=file>
+       <input type=submit value=Upload>
+  </form>
+      <!-- THIS IS FOR HTS VALIDATION PURPOSES
+    <div class="clearfix">
+      <img  src="/static/ROC_HTS.png" alt="ROC curve">
+      <span style="vertical-align:middle; line-height: 30px;"><br></span></div>
+     <br>
+     <div class="table-responsive">
+     <table class="table">
+    <p>{{data | safe}}
+        </div>
+        <div class="clearfix">
+      <img class="img2" src="/static/HTS_CM_seaborn.png" alt="Precision CM">
+      <span style="vertical-align:middle; line-height: 30px;">
+        </span></div>-->
+
+{% endblock %}

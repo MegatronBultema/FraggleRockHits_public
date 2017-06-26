@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class = "jumbotron text-center">
+  <image src = '/static/FRH1.png' alt="FraggleRockHit"  height="240" width="720">
+  <p class="lead">Machine Learning Applied to Drug Lead Identification
+</div>
+<h1>Motivation</h1>
+<p>Drug development is an expensive and time consuming endeavor reflected in the high cost of novel pharmaceutical development. Computational screening of high-throughput molecule libraries can reduce cost associated with exploratory assays of novel drug targets. One common approach to drug development is to test how small fragments of molecules interact with a given target and use this information to guide construction of lead compounds (chemical compounds which have promising pharmacological activity). In this work I sought to develop a machine-learning algorithm that could use fragment screening results for a unique target and predict the likelihood of a given molecule to act as an effective drug. The resulting application FraggleRockHits was trained and validated using experimental results of molecular screens applied to the novel cancer target MTH1 provided by collaborators from SciLifeLab, Sweden as part of a fellowship with Stockholm University.
+
+<h1>Application</h1>
+  <p>FraggleRockHits is a virtual screening approach for drug development. This application allows the user to train a machine learning algorithm to recognize unique physiochemical  properties present in fragment screening hits (active compounds). The model can then be used to query high-throughput libraries and predict the probability of a given molecule to be a hit. The application of a FraggleRock model, unique to your target, can help you reduce the size of your potential screening library-- saving time and resources in the drug discovery process. A full writeup of the application development is available on here: <a href="https://github.com/MegatronBultema/FraggleRockHits">github.com/MegatronBultema</a>
+
+<h1>Development</h1>
+This application was developed by Megan Bultema as a capstone project for the Galvanize Data Science Immersive program. This course was completed during a fellowship with Pål Stenmark at Stockholm University. Data and project inspiration was developed during collaboration with Evert Homan at the Helleday Laboratory, SciLifeLab.
+
+<h1>Contact</h1>
+Want to know more or get assistance with implementation? Perhaps, you have a similar problem and would like to collaborate. Feel free to contact me.
+<br><br>
+Megan Bultema, Ph.D.<br>
+<p>Email: <a href="mailto:mrbkc.mxc@gmail.com"> mrbkc.mxc@gmail.com</a>
+<br>Linkedin: <a href="https://www.linkedin.com/in/megan-bultema/">linkedin.com/in/megan-bultema/</a>
+<br>GitHub: <a href="https://github.com/MegatronBultema/FraggleRockHits">github.com/MegatronBultema</a>
+{% endblock %}

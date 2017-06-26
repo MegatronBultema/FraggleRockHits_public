@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <!doctype html>
+  <html>
+  <head>
+  <style>
+
+
+
+  </style>
+  </head>
+  <body>
+    <div class = "jumbotron text-center">
+      <image src = '/static/FRH1.png' alt="FraggleRockHit"  height="240" width="720">
+      <p class="lead">User Registration
+    </div>
+    <h2>Create An Account</h2>
+    <br><br>
+    <h4>Acedemic Registration</h4>
+    <p>Fraggle Rock Hits is free for acedmic uses. Please register using your institution email and account details will be emailed.
+      <form method=post enctype=multipart/form-data value = "Acedemic Registration">
+        <p> Email:
+        <p><input type=text name=email>
+        <br>First name:
+        <p><input type=text name=f_name>
+        <br>Last name:
+        <p><input type=text name=l_name>
+        <br>Institution:
+        <p><input type=text name=institution>
+           <input type=submit name = "submit" value = Acedemic>
+      </form>
+<br>
+    <h4>Commercial Registration</h4>
+    <p>We are excited to offer services to commercial users. Please register below and additional information will be emailed.
+      <form method=post enctype=multipart/form-data value="Commercial Registration">
+        <p> Email:
+        <p><input type=text name=email_com>
+        <br>First name:
+        <p><input type=text name=f_name_com>
+        <br>Last name:
+        <p><input type=text name=l_name_com>
+        <br>Company
+        <p><input type=text name=company>
+           <input type=submit name = "submit" value = Comercial>
+      </form>
+
+
+{% endblock %}
