@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import AdaBoostClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import confusion_matrix, precision_score, recall_score, f1_score
 import matplotlib.pyplot as plt
@@ -12,6 +13,35 @@ from sets import Set
 from sklearn.metrics import roc_curve
 import roc
 import plot_confusion_matrix as pcm
+
+def adaboost(X_train, X_test, y_train, y_test, grid_search = None):
+    '''
+    This function trains a boosted tree classifier (adaboost) with the training data and
+    returns the predicted values for the "test" data (validation data)
+    Input: traning and test data,
+    grid_search: default to none, if small or large run do_grid_search and fit with best paramaters.
+    '''
+    if grid_search == 'small':
+        #best_score, best_params = do_grid_search(X_train, X_test, y_train, y_test, search_type = 'small')
+        # Initalize our model here
+        # original est = RandomForestClassifier()
+        est = AdaBoostClassifier(base_estimator=None, algorithm='SAMME.R', random_state=42)
+        param_grid = {"n_estimators": [5,10,50,100,300], "learning_rate": [0.1,0.5,1.0,1.2]}
+        # Plug in our model, params dict, and the number of jobs, then .fit()
+        gs_cv = GridSearchCV(est, param_grid, n_jobs=3).fit(X_train, y_train)
+        # return the best score and the best params
+        print(gs_cv.best_score_, gs_cv.best_params_)
+        best_params = gs_cv.best_params_
+        adaboost = AdaBoostClassifier(base_estimator=None, algorithm='SAMME.R', random_state=42, n_estimators = best_params['n_estimators'], learning_rate = best_params['learning_rate'])
+        adaboost.fit(X_train, y_train)
+        y_predict = adaboost.predict(X_test)
+        return adaboost, y_predict, best_params
+
+    else:
+        adaboost = AdaBoostClassifier(base_estimator=None, algorithm='SAMME.R', random_state=42, n_estimators = 50, learning_rate = 0.1)
+        adaboost.fit(X_train, y_train)
+        y_predict = adaboost.predict(X_test)
+        return adaboost, y_predict, best_params
 
 def randomforest(X_train, X_test, y_train, y_test, grid_search = None):
     '''
@@ -305,5 +335,3 @@ if __name__ == '__main__':
     pcm.plot_confusion_matrix_basic(p_cm, classes = ['Not a Hit', 'Hit'], name = 'precision_CM')
     p_cm = pd.DataFrame(p_cm)
     precision_opt_stats = pd.DataFrame([[format(threshold_precision, '.2f'),format(p_recall, '.2f'), format(p_fpr, '.2f'), format(p_precision, '.2f'), ]], columns = ['Suggested Threshold','True Positive Rate (Recall)', 'False Positive Rate (Fall-out)','Precision'])
-
-    

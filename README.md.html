@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>README</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(197, 200, 198); overflow: auto; background-color: rgb(29, 31, 33); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(155, 160, 157); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(155, 160, 157); border-color: rgb(67, 72, 76); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top: 2px dashed rgb(67, 72, 76); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(255, 255, 255); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(67, 72, 76); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(255, 255, 255); background-color: rgb(48, 51, 55); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(39, 41, 44); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(255, 255, 255); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(67, 72, 76) rgb(67, 72, 76) rgb(53, 57, 60); background-color: rgb(48, 51, 55); }
+.markdown-preview[data-use-github-style] { font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom: 1px solid rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left: 4px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top: 1px solid rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-width: 1px; border-style: solid; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover .horizontal-scrollbar { visibility: visible; }
+.markdown-preview .task-list-item-checkbox { position: absolute; margin: 0.25em 0px 0px -1.4em; }
+.markdown-preview code { text-shadow: none; }
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors {
+  background-color: #1d1f21;
+  color: #c5c8c6;
+}
+pre.editor-colors .wrap-guide {
+  background-color: #676a6c;
+}
+pre.editor-colors .indent-guide {
+  color: #676a6c;
+}
+pre.editor-colors .invisible-character {
+  color: #676a6c;
+}
+pre.editor-colors .gutter {
+  background-color: #1d1f21;
+  color: #969896;
+}
+pre.editor-colors .gutter .line-number {
+  padding: 0 0.25em 0 0.5em;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line {
+  background-color: #373b41;
+  color: #c5c8c6;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection {
+  color: #c5c8c6;
+}
+pre.editor-colors .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+pre.editor-colors .fold-marker:after {
+  color: #969896;
+}
+pre.editor-colors .invisible {
+  color: #c5c8c6;
+}
+pre.editor-colors .cursor {
+  color: #ffffff;
+}
+pre.editor-colors .selection .region {
+  background-color: #373b41;
+}
+pre.editor-colors .bracket-matcher .region {
+  border-color: #969896;
+}
+.syntax--comment {
+  color: #969896;
+}
+.syntax--entity.syntax--name.syntax--type {
+  color: #f0c674;
+}
+.syntax--entity.syntax--other.syntax--inherited-class {
+  color: #b5bd68;
+}
+.syntax--keyword {
+  color: #b294bb;
+}
+.syntax--keyword.syntax--control {
+  color: #b294bb;
+}
+.syntax--keyword.syntax--operator {
+  color: #c5c8c6;
+}
+.syntax--keyword.syntax--other.syntax--special-method {
+  color: #81a2be;
+}
+.syntax--keyword.syntax--other.syntax--unit {
+  color: #de935f;
+}
+.syntax--storage {
+  color: #b294bb;
+}
+.syntax--constant {
+  color: #de935f;
+}
+.syntax--constant.syntax--character.syntax--escape {
+  color: #8abeb7;
+}
+.syntax--constant.syntax--numeric {
+  color: #de935f;
+}
+.syntax--constant.syntax--other.syntax--color {
+  color: #8abeb7;
+}
+.syntax--constant.syntax--other.syntax--symbol {
+  color: #b5bd68;
+}
+.syntax--variable {
+  color: #cc6666;
+}
+.syntax--variable.syntax--interpolation {
+  color: #a3685a;
+}
+.syntax--variable.syntax--parameter.syntax--function {
+  color: #c5c8c6;
+}
+.syntax--invalid.syntax--illegal {
+  background-color: #cc6666;
+  color: #1d1f21;
+}
+.syntax--string {
+  color: #b5bd68;
+}
+.syntax--string.syntax--regexp {
+  color: #8abeb7;
+}
+.syntax--string.syntax--regexp .syntax--source.syntax--ruby.syntax--embedded {
+  color: #f0c674;
+}
+.syntax--string.syntax--other.syntax--link {
+  color: #cc6666;
+}
+.syntax--punctuation.syntax--definition.syntax--parameters,
+.syntax--punctuation.syntax--definition.syntax--array {
+  color: #c5c8c6;
+}
+.syntax--punctuation.syntax--definition.syntax--heading,
+.syntax--punctuation.syntax--definition.syntax--identity {
+  color: #81a2be;
+}
+.syntax--punctuation.syntax--definition.syntax--bold {
+  color: #f0c674;
+  font-weight: bold;
+}
+.syntax--punctuation.syntax--definition.syntax--italic {
+  color: #b294bb;
+  font-style: italic;
+}
+.syntax--punctuation.syntax--section.syntax--embedded {
+  color: #a3685a;
+}
+.syntax--punctuation.syntax--section.syntax--method,
+.syntax--punctuation.syntax--section.syntax--class,
+.syntax--punctuation.syntax--section.syntax--inner-class {
+  color: #c5c8c6;
+}
+.syntax--support.syntax--class {
+  color: #f0c674;
+}
+.syntax--support.syntax--function {
+  color: #8abeb7;
+}
+.syntax--support.syntax--function.syntax--any-method {
+  color: #81a2be;
+}
+.syntax--entity.syntax--name.syntax--function {
+  color: #81a2be;
+}
+.syntax--entity.syntax--name.syntax--class,
+.syntax--entity.syntax--name.syntax--type.syntax--class {
+  color: #f0c674;
+}
+.syntax--entity.syntax--name.syntax--section {
+  color: #81a2be;
+}
+.syntax--entity.syntax--name.syntax--tag {
+  color: #cc6666;
+}
+.syntax--entity.syntax--other.syntax--attribute-name {
+  color: #de935f;
+}
+.syntax--entity.syntax--other.syntax--attribute-name.syntax--id {
+  color: #81a2be;
+}
+.syntax--meta.syntax--class {
+  color: #f0c674;
+}
+.syntax--meta.syntax--class.syntax--body {
+  color: #c5c8c6;
+}
+.syntax--meta.syntax--link {
+  color: #de935f;
+}
+.syntax--meta.syntax--method-call,
+.syntax--meta.syntax--method {
+  color: #c5c8c6;
+}
+.syntax--meta.syntax--require {
+  color: #81a2be;
+}
+.syntax--meta.syntax--selector {
+  color: #b294bb;
+}
+.syntax--meta.syntax--separator {
+  background-color: #373b41;
+  color: #c5c8c6;
+}
+.syntax--meta.syntax--tag {
+  color: #c5c8c6;
+}
+.syntax--none {
+  color: #c5c8c6;
+}
+.syntax--markup.syntax--bold {
+  color: #de935f;
+  font-weight: bold;
+}
+.syntax--markup.syntax--changed {
+  color: #b294bb;
+}
+.syntax--markup.syntax--deleted {
+  color: #cc6666;
+}
+.syntax--markup.syntax--italic {
+  color: #b294bb;
+  font-style: italic;
+}
+.syntax--markup.syntax--heading {
+  color: #cc6666;
+}
+.syntax--markup.syntax--heading .syntax--punctuation.syntax--definition.syntax--heading {
+  color: #81a2be;
+}
+.syntax--markup.syntax--link {
+  color: #81a2be;
+}
+.syntax--markup.syntax--inserted {
+  color: #b5bd68;
+}
+.syntax--markup.syntax--quote {
+  color: #de935f;
+}
+.syntax--markup.syntax--raw {
+  color: #b5bd68;
+}
+.syntax--source.syntax--gfm .syntax--markup {
+  -webkit-font-smoothing: auto;
+}
+.syntax--source.syntax--gfm .syntax--link .syntax--entity {
+  color: #8abeb7;
+}
+.syntax--source.syntax--cs .syntax--keyword.syntax--operator {
+  color: #b294bb;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json {
+  color: #cc6666;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation.syntax--string {
+  color: #cc6666;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--value.syntax--json > .syntax--string.syntax--quoted.syntax--json > .syntax--punctuation {
+  color: #b5bd68;
+}
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--dictionary.syntax--json > .syntax--constant.syntax--language.syntax--json,
+.syntax--source.syntax--json .syntax--meta.syntax--structure.syntax--array.syntax--json > .syntax--constant.syntax--language.syntax--json {
+  color: #8abeb7;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h1 id="fragglerockhits">FraggleRockHits</h1>
+<p>Machine Learning applied to drug development.</p>
+<p><strong>Purpose</strong>
+<br>Drug development is an expensive and time consuming endeavor reflected in the rising cost of novel pharmaceuticals. Computational screening of high-throughput molecule libraries can reduce cost associated with exploratory assays of novel drug targets. One common approach to drug development is to test how small fragments of molecules interact with a given target and use this information to guide construction of lead compounds (chemical compounds which having promising pharmacological activity). In this work I sought to develop a machine-learning algorithm that could use fragment screening results for a unique target and predict the likelihood of a given molecule to act as an effective drug.  The resulting application FraggleRockHits was trained and validated using experimental results of molecular screens applied to the novel cancer target MTH1 provided by collaborators from SciLifeLab, Sweden as part of a fellowship at Stockholm University.</p>
+<p><strong>MTH1 Inhibition</strong><br>
+<a href="https://www.youtube.com/watch?v=NAPYaSQPios">https://www.youtube.com/watch?v=NAPYaSQPios</a></p>
+<p> MTH1 is a novel cancer target involved in maintenance of reactive oxygen species produced in rapidly dividing cancer cells. By inhibiting the molecular function of this enzyme we can selectively target cancer cells while minimizing negative side effects to the patient. During the development of inhibitors to MTH1 fragment-based lead discovery (FBLD) was employed. Fragment based lead discovery is a method in which small chemical fragments are tested for weak to moderate binding affinity toward a target. Fragments can then be further developed or combined to produce leads with higher affinity (Figure 1). A library of small chemical fragments (MW ~ 200 Da, 548 molecules) were screened for binding and/or activity toward the given target (MTH1). Identification of <strong>&quot;hits&quot;</strong>, or active compounds were identified by an increase in melting temperature of the target in presence of a given compound (see Hit Classification below, Figure 2). In tandem, high-throughput screening (HTS) of larger  molecules (MW ~ 500 Da, 5500 molecules) were also screened for biochemical activity. <strong>The machine-learning algorithm presented here was trained using fragment screening results and was successful in determining favorable physiochemical characteristics and applying these metrics toward a screen of molecules approximately twice the size and complexity of the training library.</strong></p>
+<p>Figure 1. Fragment-Based Lead Discovery
+<img src="/Users/DataScience/Documents/FraggleRockHits_public/images/fragments.jpg?" alt="Alt text" title="Optional Title"></p>
+<p><strong>FraggleRockHits</strong><br>
+<strong>Data Collection and Preperation</strong>
+452 molecule ligand fragments were tested for activity towards the MTH1 target and scored as hit (1) or not a hit (0).</p>
+<ul>
+<li><p>Hit Classification: The change in melting temperature of the target was determined in presence of each ligand fragment. Ligands which bind (at equilibrium) usually increase the protein thermal stability (indicated by the melting temperature) by an amount proportional to the concentration and affinity of the ligand. Therefore, the change in melting temperature of the ligand in the presence of a ligand or ligand fragment can be used to indicate binding affinity. We scored any ligand fragment with a change in melting temperature equal to or greater than 5°C to be a binding &quot;hit&quot;.</p>
+<p>Figure 2. Protein melting curve detected as the change in relative fluoresce units (RFU) of a molecular probe.
+<img src="/Users/DataScience/Documents/FraggleRockHits_public/images/melt-curve_exp.jpg?" alt="Alt text" title="Optional Title"></p>
+</li>
+<li><p>Chemical Descriptors: Descriptors of the ligand fragments were generated using RDKIt nodes in Knime, and are a combination of fingerprints (Morgan, 1024 bits, radius 4) and physicochemical properties (all available). The Morgan fingerprints were expanded into 1024 columns, resulting in a final descriptor matrix of 1130 columns.</p>
+</li>
+<li><p>Chemical Fingerprint Generation</p>
+<p>Figure 3. Molecular fingerprints are a way of encoding the structure of a molecule in numerical form.
+<img src="/Users/DataScience/Documents/FraggleRockHits_public/images/ecfp_generation.png" alt="Alt text" title="Optional Title"></p>
+</li>
+</ul>
+<p><strong>Model Selection</strong>
+Multiple classifier models (Logistic Regression, Neural Networks, Random Forest Classifiers, Support Vector Machine Classifiers, Boosted Decision Tree (Xgboost*), Principal Component Analysis) and feature combinations were test of which two gave promising results and were followed to completion.</p>
+<p><strong>Linear Discriminate Analysis (LDA)</strong><br>
+The goal of LDA is to identify the linear combinations of original variables that gives the best possible separation between the groups (hit (1) or not a hit (0)). The downside to LDA is that because it involves computing a matrix inverse the estimated coefficients are impossible to interpret. LDA was fit with the entire training set (as there are no hyperparameters to optimize) and applied to the HTS test set.
+Values below are produced by the resulting discriminate function applied to the HTS test set.</p>
+<p>Means:</p>
+<table>
+<thead>
+<tr>
+<th>Hit</th>
+<th>LD1    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td> 0.0</td>
+<td>-0.212585</td>
+</tr>
+<tr>
+<td> 1.0</td>
+<td>5.307576</td>
+</tr>
+</tbody>
+</table>
+<p>Standard deviations:</p>
+<table>
+<thead>
+<tr>
+<th>Hit</th>
+<th>LD1    </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.0</td>
+<td>0.932811</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>2.057373</td>
+</tr>
+</tbody>
+</table>
+<p>Sample sizes:</p>
+<table>
+<thead>
+<tr>
+<th>Classification</th>
+<th>Number</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.0</td>
+<td>5268</td>
+</tr>
+<tr>
+<td>1.0</td>
+<td>211</td>
+</tr>
+</tbody>
+</table>
+<p>Confusion Matrix of HTS screen.
+<br>
+<img src="/Users/DataScience/Documents/FraggleRockHits_public/images/CM.png" width="200" height="200" align="middle"><br>
+<img src="/Users/DataScience/Documents/FraggleRockHits_public/images/LDA_HTS_CM_seaborn_standardized.png" width="200" height="200">
+<br><br>
+ROC curve of LDA Classifier<br>
+<img src="/Users/DataScience/Documents/FraggleRockHits_public/images/lda_roc_Xst_st.png">
+<br><br>Histogram of LDA classification<br>
+<img src="/Users/DataScience/Documents/FraggleRockHits_public/images/histogram.png" width="250" height="200"></p>
+<p><strong>Random Forest Classifier</strong><br>
+Decision trees are useful in many aspects including using variables to classify  instances into categories. An individual decision tree is built by iterating through the feature space (physiochemical properties) and determining which demarcation provides the most statistically significant separation of two classes. Random forests are an ensemble method applied to decision trees built on bootstrapped samples. That means that multiple decision trees are built under different constraints and the classification from all of the decision trees are averaged to yield the final result for each instance. In order to decorrelate the individual trees (in addition to sample bootstrapping) a number of randomly selected variables (again in this case physiochemical properties) are selected for consideration at each branch in the decision tree.</p>
+<p>The hyperparameters of a Random Forest Classifier (RFC) (sklearn) were optimized via cross-fold validation grid search of 70% of the training library, subsequently referred to as the training set (fragment screen data). The resulting model was fit with the training data and applied to the validation set, the remaining 30%.</p>
+<p>Grid Search Parameters <br>
+{&quot;n_estimators&quot;: [10,20,50,100],
+&quot;max_depth&quot;: [3, 5, 10, 30, 50, 100], &quot;max_depth&quot;:[2,5,10,30],
+&quot;max_features&quot;: [1, 3, 10, 30],
+&quot;min_samples_split&quot;: [2, 3, 10],
+&quot;min_samples_leaf&quot;: [2, 3, 10],
+&quot;bootstrap&quot;: [True, False],
+&quot;criterion&quot;: [&quot;gini&quot;, &quot;entropy&quot;],
+&quot;class_weight&quot;:[None, &quot;balanced_subsample&quot;]}</p>
+<p>Oversampling <br><br>
+Only 9% of the fragment library were scored as hits (44 of the 452). Oversampling was employed to overcome the class imbalance between the 9% hits and 91% not hits. Random resampling of the minority class was performed to achieve a ratio to 30% hit class  (imblearn.over_sampling.RandomOverSampler).</p>
+<p>The results of the cross-fold training set and validation set classifications after training a RFC with grid search best parameters and over sampled minority class data are shown below.</p>
+<p><img src="/Users/DataScience/Documents/FraggleRockHits_public/images/new_roc_train_edit.png">
+<br></p>
+<p><img src="/Users/DataScience/Documents/FraggleRockHits_public/images/CM.png" width="200" height="200" align="middle"><br>
+<img src="/Users/DataScience/Documents/FraggleRockHits_public/images/base_CM_seaborn.png" width="200" height="200"></p>
+<p>Feature importance
+One added benefit to working with RFC is that the feature importance is readily accessible. Below are the top ten features (physiochemical properties) which contributed to most to decreasing the class impurity within the random forest. <br></p>
+<p><img src="/Users/DataScience/Documents/FraggleRockHits_public/images/Feature_Importance_Train.png"></p>
+<p><img src="/Users/DataScience/Documents/FraggleRockHits_public/images/descriptors.png"></p>
+<p>Threshold Selection<br>
+In order for this analysis to be useful in an active drug development setting a threshold selection option was implemented. I foresee the use of this algorithm most commonly in one of two ways.<br>
+1) Reduce the size of a high-throughput screen for experimental investigation. <br>
+2) Choose a few select molecules to throughly investigate.</p>
+<p>If the user&#39;s goal is the first mentioned, to reduce the size of a high-throughput library for further investigation, a lower threshold will be optimized. This will ensure that all of the truly active compounds are in the predicted hit category and therefore the investigator will not miss out on any possible leads. For my validation set it is possible to set a threshold which reduces the potential screening library by 64% while maintaining 77% of the true hits.</p>
+<table>
+<thead>
+<tr>
+<th>Suggested Threshold</th>
+<th>True Positive Rate (Recall)</th>
+<th>False Positive Rate (Fall-out)</th>
+<th>Precision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.27</td>
+<td>0.78</td>
+<td>0.33</td>
+<td>0.21</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/Users/DataScience/Documents/FraggleRockHits_public/images/CM.png" width="200" height="200" align="middle"><br>
+<img src="/Users/DataScience/Documents/FraggleRockHits_public/images/recall_CM_seaborn.png" width="200" height="200">  </p>
+<p><strong>Note: calculate information gain</strong></p>
+<p>If the user&#39;s goal is to choose only a few selected molecules to throughly investigate, a higher threshold, one optimized for precision, will be more useful. Applied to the validation set this resulted in a predicted hit class of 10% of the original screen in which 43% of the true hits were captured.</p>
+<table>
+<thead>
+<tr>
+<th>Suggested Threshold</th>
+<th>True Positive Rate (Recall)</th>
+<th>False Positive Rate (Fall-out)</th>
+<th>Precision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.55</td>
+<td>0.33</td>
+<td>0.05</td>
+<td>0.43</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/Users/DataScience/Documents/FraggleRockHits_public/images/CM.png" width="200" height="200" align="middle"><br>
+<img src="/Users/DataScience/Documents/FraggleRockHits_public/images/precision_CM_seaborn.png" width="200" height="200"><br>
+<br><br></p>
+<p><strong>High-throughput Screen Validation</strong>
+A library of 5479 molecules were submitted to the trained Random Forest Classifier for prediction. These molecules were previously tested and scored as hit or not a hit experimentally and therefore provide a test set for our algorithm. The resulting ROC curve demonstrates that the ROC was able to effectively predict hits from the high-throughput screen after being trained on a fragment library.</p>
+<p><img src="/Users/DataScience/Documents/FraggleRockHits_public/images/ROC_HTS.png"><br></p>
+<p>Threshold selection:<br>
+1) Reduced screen by 48% while maintaining 87% recall!</p>
+<table>
+<thead>
+<tr>
+<th>Selected Threshold</th>
+<th>True Positive Rate (Recall)</th>
+<th>False Positive Rate (Fall-out)</th>
+<th>Precision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.27</td>
+<td>0.87</td>
+<td>0.51</td>
+<td>0.06</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/Users/DataScience/Documents/FraggleRockHits_public/images/CM.png" width="200" height="200" align="middle"><br>
+<img src="/Users/DataScience/Documents/FraggleRockHits_public/images/HTS_CM_seaborn.png" width="200" height="200"><br></p>
+<p>2) Predicted 2% of the library to be a hit in which 17% were correctly identified.</p>
+<table>
+<thead>
+<tr>
+<th>Selected Threshold</th>
+<th>True Positive Rate (Recall)</th>
+<th>False Positive Rate (Fall-out)</th>
+<th>Precision</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.55</td>
+<td>0.09</td>
+<td>0.02</td>
+<td>0.17</td>
+</tr>
+</tbody>
+</table>
+<p><img src="/Users/DataScience/Documents/FraggleRockHits_public/images/CM.png" width="200" height="200" align="middle"><br>
+<img src="/Users/DataScience/Documents/FraggleRockHits_public/images/HTS_CM_seaborn_precision.png" width="200" height="200"><br></p>
+<p><strong>Next Steps</strong>
+<br>Completed:</p>
+<ul>
+<li>A) deploy web app -check!
+  A.1) add molecule depictions to results page -check!
+  RDKIT is awesome!! It is functions to integrate morgan figerprints with ML models from sklearn, just wow.</li>
+<li>B) test trained model on ligand fragment screen with ligand screening data - check!</li>
+<li>B.2) test this data with other classifiers (NN) -check!
+Conclusion: Not any better</li>
+<li>C) collect and report recall and precision for all models and feature spaces tested (not all yet)</li>
+<li>D) insert ROC curves -check!</li>
+<li>E) preform PCA and feed into classifiers -check! results unsatisfactory, talk to instructors</li>
+</ul>
+<hr>
+<p>To do:</p>
+<ul>
+<li>F) fix my xgboost package</li>
+<li>G) get descriptor table in readme</li>
+<li>H) demo page on app</li>
+<li>I) user login and password on app</li>
+<li>J) app up and running on AWS with domain name</li>
+<li>K) finish poster</li>
+</ul>
+<p><br></p>
+<p><strong>References</strong></p>
+<ol>
+<li>G. M. Dimitri, P. Lio, DrugClust: A machine learning approach for drugs side effects prediction. Computational biology and chemistry 68, 204 (Jun, 2017).</li>
+<li>A. Lavecchia, Machine-learning approaches in drug discovery: methods and applications. Drug discovery today 20, 318 (Mar, 2015).</li>
+<li>A. N. Lima et al., Use of machine learning approaches for novel drug discovery. Expert opinion on drug discovery 11, 225 (2016).</li>
+<li>M. Vass et al., Molecular interaction fingerprint approaches for GPCR drug discovery. Current opinion in pharmacology 30, 59 (Oct, 2016).</li>
+<li><a href="http://www.proteos.com/services/assay-services/thermal-shift-analysis">http://www.proteos.com/services/assay-services/thermal-shift-analysis</a> (image, melting temperature)</li>
+<li>P. J. Hajduk, W. R. Galloway, D. R. Spring, Drug discovery: A question of library design. Nature 470, 42 (Feb 03, 2011).(image, fragment screen)</li>
+</ol>
+<p><strong>Code References</strong></p>
+<ol>
+<li><a href="https://github.com/oddt/rfscorevs">https://github.com/oddt/rfscorevs</a></li>
+<li><a href="http://istar.cse.cuhk.edu.hk/">http://istar.cse.cuhk.edu.hk/</a>, <a href="https://github.com/HongjianLi/istar">https://github.com/HongjianLi/istar</a></li>
+<li><a href="http://silicos-it.be.s3-website-eu-west1.amazonaws.com/cookbook/configuring_osx_for_chemoinformatics/configuring_osx_for_chemoinformatics.html#rdkit">http://silicos-it.be.s3-website-eu-west1.amazonaws.com/cookbook/configuring_osx_for_chemoinformatics/configuring_osx_for_chemoinformatics.html#rdkit</a></li>
+<li><a href="https://github.com/rdkit/rdkit">https://github.com/rdkit/rdkit</a></li>
+<li><a href="https://github.com/MaxHalford/Prince/blob/master/docs/mca.rst">https://github.com/MaxHalford/Prince/blob/master/docs/mca.rst</a></li>
+<li><a href="http://www.rdkit.org/docs/Cookbook.html">http://www.rdkit.org/docs/Cookbook.html</a></li>
+<li><a href="https://github.com/gatsoulis/a_little_book_of_python_for_multivariate_analysis/blob/master/a_little_book_of_python_for_multivariate_analysis.ipynb">https://github.com/gatsoulis/a_little_book_of_python_for_multivariate_analysis/blob/master/a_little_book_of_python_for_multivariate_analysis.ipynb</a></li>
+<li><a href="https://runningcodes.net/flask-login-and-mongodb/">https://runningcodes.net/flask-login-and-mongodb/</a></li>
+<li><a href="https://github.com/maxcountryman/flask-login">https://github.com/maxcountryman/flask-login</a></li>
+</ol></body>
+</html>
